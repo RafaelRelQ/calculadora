@@ -1,0 +1,222 @@
+body{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: whitesmoke;
+}
+body.dark{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(43, 43, 43);
+    color: white;
+}
+
+/* Grid Config */
+
+div.container{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 100px;
+    grid-template-areas: 
+    'title title title title'
+    'result result result result'
+    'numbers numbers numbers operators'
+    'numbers numbers numbers operators'
+    'numbers numbers numbers operators'
+    'equal equal equal operators'
+    ;
+    gap: 1%;
+}
+div.title{
+    grid-area: title;
+}
+
+div.result{
+    grid-area: result;
+}
+
+div.numbers{
+    grid-area: numbers;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1%;
+}
+
+div.operators{
+    grid-area: operators;
+    display: grid;
+    gap: 1%;
+}
+div.equal{
+    display: grid;
+    grid-area: equal;
+    gap: 1%;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+/* Style Config */
+
+div.result{
+    text-align: right;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    border: solid 1px rgb(43, 43, 43);
+    margin-left: 1%;
+    margin-right: 1%;
+    font-size: x-large;
+    font-family: 'Segoe UI';
+}
+div.resultdark{
+    text-align: right;
+    border: solid 1px whitesmoke;
+    margin-left: 1%;
+    margin-right: 1%;
+    color: whitesmoke;
+}
+
+button#theme{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 5%;
+    border: solid 1px rgb(43, 43, 43);
+    border-radius: 5px;
+    padding: 2%;
+}
+
+button#theme.dark{
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 5%;
+    border: solid 1px whitesmoke;
+    border-radius: 5px;
+    background: rgb(43, 43, 43);
+}
+
+p.title{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 5%;
+}
+
+button.number{
+    border: solid 1px rgb(43, 43, 43);
+    border-radius: 5px;
+    font-size: large;
+}
+
+button.numberdark{
+    border: solid 1px whitesmoke;
+    border-radius: 5px;
+    background: rgb(43, 43, 43);
+    color: white;
+}
+
+button.equal{
+    border: solid 1px rgb(43, 43, 43);
+    border-radius: 5px;
+    font-size: large;
+}
+
+button.equaldark{ 
+    border: solid 1px whitesmoke;
+    border-radius: 5px;
+    background: rgb(43, 43, 43);
+    color: white;
+}
+
+button.operators{
+    border: solid 1px rgb(43, 43, 43);
+    border-radius: 5px;
+    font-size: large;
+}
+
+button.operatorsdark{
+    border: solid 1px whitesmoke;
+    border-radius: 5px;
+    background: rgb(43, 43, 43);
+    color: white;
+}
+
+button{
+    transition-duration: 0.1s;
+}
+
+@media only screen and (max-width: 500px) {
+  button:active {
+    background: rgb(124, 124, 124);
+  }
+}
+
+@media only screen and (min-width:500px){
+    button:hover{
+    background: rgb(124, 124, 124);
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+div.container{
+    width: 80%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 100px;
+    grid-template-areas: 
+    'title title title title'
+    'result result result result'
+    'numbers numbers numbers operators'
+    'numbers numbers numbers operators'
+    'numbers numbers numbers operators'
+    'equal equal equal operators'
+    ;
+    gap: 1%;
+}
+}
+
+@media only screen and (min-width:700px){
+    div.container{
+    width: 50%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 100px;
+    grid-template-areas: 
+    'title title title title'
+    'result result result result'
+    'numbers numbers numbers operators'
+    'numbers numbers numbers operators'
+    'numbers numbers numbers operators'
+    'equal equal equal operators'
+    ;
+    gap: 1%;
+}
+}
+
+@media only screen and (min-width:1200px){
+    div.container{
+    width: 30%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 100px;
+    grid-template-areas: 
+    'title title title title'
+    'result result result result'
+    'numbers numbers numbers operators'
+    'numbers numbers numbers operators'
+    'numbers numbers numbers operators'
+    'equal equal equal operators'
+    ;
+    gap: 1%;
+    }
+}
